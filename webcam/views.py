@@ -2,13 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from django.template import RequestContext, loader
+from django.template import  loader
 from django.http.response import StreamingHttpResponse
 from webcam.models import two_weeler
 import cv2
 import numpy as np
-import datetime
-import time
+
 
 
 
@@ -88,7 +87,7 @@ def test(video):
                 cv2.putText(img, f'{"unidentified"} {int(confs[i]*100)}%',
                             (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
     ret = True
-    while True:
+    while ret:
         ret, frame = vid.read()
        
         frame = cv2.resize(frame, (1000, 700))
