@@ -9,6 +9,9 @@ class two_weeler(models.Model):
 
 
 
+class crime(models.Model):
+    name = models.TextField()
+    proof = models.ImageField()
     
     
 

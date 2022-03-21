@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import  loader
 from django.http.response import StreamingHttpResponse
-from webcam.models import two_weeler
+from webcam.models import two_weeler , crime
 import cv2
 import numpy as np
 
@@ -43,7 +43,7 @@ def test(video):
     vid = cv2.VideoCapture(video)
     whT = 320
     confThreshold = 0.5
-    nmsThreshold = 0.3
+    nmsThreshold = 0.6
     classesFile = 'yolov3_weight\coco.names'
     classNames = []
     f = open(classesFile, 'rt')
@@ -79,13 +79,14 @@ def test(video):
             i = i[0]
             box = bbox[i]
             x, y, w, h = box[0], box[1], box[2], box[3]
-            cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 255), 2)
-            try:
-                cv2.putText(img, f'{classNames[classIds[i]].upper()} {int(confs[i]*100)}%',
-                            (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
-            except:
-                cv2.putText(img, f'{"unidentified"} {int(confs[i]*100)}%',
-                            (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
+            cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+          
+            cv2.putText(img, f'{classNames[classIds[i]].upper()} {int(confs[i]*100)}%',
+                            (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+            if i==0:
+                im1 = Image.open(r"currentframe.jpg") 
+                crime.objects.create(name=two_weeler.objects.all()[len(two_weeler.objects.all())-1].name,proof=im1.save("g.png"))
+           
     ret = True
     while ret:
         ret, frame = vid.read()
@@ -184,6 +185,6 @@ def video_feed_1(request):
 # DISPLAY CAMERA 2 ------------------
 def video_feed_2(request):
     print("x",str(two_weeler.objects.all()[0].file))
-    return StreamingHttpResponse(test(str(two_weeler.objects.all()[0].file)), content_type='multipart/x-mixed-replace; boundary=frame')
+    return StreamingHttpResponse(test(str(two_weeler.objects.all()[len(two_weeler.objects.all())-1].file)), content_type='multipart/x-mixed-replace; boundary=frame')
 # -----------------------------------
 
