@@ -7,7 +7,6 @@ importlib-metadata==4.6.1
 Markdown==3.3.4
 mysqlclient==2.0.3
 numpy==1.21.1
-opencv-python==4.5.3.56
 opt-einsum==3.3.0
 Pillow>=9.0.1
 protobuf==3.17.3
