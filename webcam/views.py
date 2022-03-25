@@ -1,5 +1,6 @@
+from msilib.schema import File
 from django.shortcuts import render
-
+from django.core.files import File 
 # Create your views here.
 from django.http import HttpResponse
 from django.template import  loader
@@ -84,8 +85,10 @@ def test(video):
             cv2.putText(img, f'{classNames[classIds[i]].upper()} {int(confs[i]*100)}%',
                             (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
             if i==0:
-                im1 = Image.open(r"currentframe.jpg") 
-                crime.objects.create(name=two_weeler.objects.all()[len(two_weeler.objects.all())-1].name,proof=im1.save("g.png"))
+                di=crime()
+                di.name=two_weeler.objects.all()[len(two_weeler.objects.all())-1].name
+                di.proof.save("proof.jpg", File(open(r"C:\Users\PRANAV ARYA\Documents\GitHub\traffic\currentframe.jpg", 'rb')), save=True)
+                
            
     ret = True
     while ret:

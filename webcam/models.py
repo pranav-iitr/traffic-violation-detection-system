@@ -1,6 +1,8 @@
-from tokenize import Number
+import os
 from django.db import models
-
+from django.core.files.base import ContentFile
+from PIL import Image
+from io import StringIO
 
 class two_weeler(models.Model):
     name = models.CharField(max_length=500)
@@ -11,7 +13,8 @@ class two_weeler(models.Model):
 
 class crime(models.Model):
     name = models.TextField()
-    proof = models.ImageField()
+ 
+    proof = models.ImageField(upload_to="img")
     
     
 
