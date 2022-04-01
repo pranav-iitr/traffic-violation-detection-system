@@ -20,7 +20,7 @@ def Api(img):
             'https://api.platerecognizer.com/v1/plate-reader/',
             data=dict(regions=regions),  # Optional
             files=dict(upload=fp),
-            headers={'Authorization': 'Token b9ad7ce6fa71b1e561f0206bbea4de40d637cdb3'})
+            headers={'Authorization': 'Token '})
         return response.json()["results"][0]["candidates"][0]["plate"]
 
 
