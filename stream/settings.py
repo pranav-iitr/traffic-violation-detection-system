@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-# 2019-07-23 Modified by Tran Le Anh
+# this code was adapted from a sample code written by Tran Le Anh
 
 import os
 
