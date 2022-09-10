@@ -90,6 +90,10 @@ python manage.py runserver
 
 <br/>
 
+# Achivement
+
+### The Project Recived Gold Medal 
+
 # Result
 
 ### A platform was successfully presented to detect people on a two-wheeler and not wear helmets present in a given frame, storing proof of the violation and the number plate of the vehicle, leading to 30 points(max possible) in the Engineering conclave of Inter IIT Tech Meet 10 helping Institute to Bag Bronze Medal for the same   
