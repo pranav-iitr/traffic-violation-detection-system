@@ -1,4 +1,4 @@
-# Inter IIT Tech Meet 10.0 Engineering Conclave , Recived a Gold Medal fro the same
+# Inter IIT Tech Meet 10.0 Engineering Conclave , Recived a Gold Medal for the same
 
 ## Problem Statement
 
