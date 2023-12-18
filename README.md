@@ -1,8 +1,8 @@
-# Inter IIT Tech Meet 10.0 Engineering Conclave , Recived a Gold Medal for the same
+# Inter IIT Tech Meet 12.0 Engineering Conclave 
 
 ## Problem Statement
 
-#### To create a deep-learning based system to detect and store information of traffic violators in a database hosted on a website to collect proof and number plates of the criminals simultaneously.
+#### To create a deep-learning-based system to detect and store information on traffic violators in a database hosted on a website to collect proof and number plates of the criminals simultaneously.
 
 ## Mentors
 
@@ -17,7 +17,7 @@
 ### [Ananya Sharma](https://github.com/sharmaananya-14)
 <br/>
 
-## Technolegy used
+## Technology used
 
 <img align="left" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" style="padding-right:10px;" />
 <img align="left"  width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original-wordmark.svg" style="padding-right:10px;" />
@@ -29,60 +29,60 @@
 
 # Approach
 
-#### 1) Learn Differnt Computer Vission and Deep Learning models
+#### 1) Learn different Computer Vision and Deep Learning models
 
-#### 2) As yolo was chosen for the project, do an in depth study of it's working and custom training 
+#### 2) As Yolo was chosen for the project, do an in-depth study of its working and custom training 
 
 #### 3) Collect images using Google and Kaggle
 
-#### 4) Labling of images was implemented using [labelImg](https://github.com/tzutalin/labelImg)
+#### 4) Labeling of images was implemented using [labelImg](https://github.com/tzutalin/labelImg)
 
 #### 5) Train the model on the collected Data set 
 
-#### 6) Made a Django based web interface to host the model
+#### 6) Made a Django-based web interface to host the model
 
 <br/>
 
 # Solution
 
-#### 1)Intial dataset consisted of 100 images which were expanded using image processing tecniques using OpenCV
+#### 1) The initial dataset consisted of 100 images which were expanded using image processing techniques using OpenCV
 
 #### 2) We used  [labelImg](https://github.com/tzutalin/labelImg) to gentrate labled .txt file
 
-#### 3) Seraching for proper training parameters was toughest part, after multiple experiments and advice for mentors we were able to fix parameters like learning rate,no of steps for training and much more
+#### 3) Searching for proper training parameters was the toughest part, after multiple experiments and advice from mentors we were able to fix parameters like learning rate, no of steps for training, and much more
 
-#### 4) Model training was done using google collab and data was acessed via google drive 
+#### 4) Model training was done using Google Collab and data was accessed via Google Drive 
 
-#### 5) Intial problems in the model were resoloved using better data sets, changing parameters
+#### 5) Initial problems in the model were resolved using better data sets, changing parameters
 
-#### 6) After training of model with sufficent accurecy it had to host it on a website
+#### 6) After training the model with sufficient accuracy it had to be hosted on a website
 
-#### 7) it was deployed on Django because it is written in python,OpenCv can used with Django and it has many inbuilt fetures to aid the process of integration and built the website
+#### 7) It was deployed on Django because it is written in Python, OpenCV can be used with Django and it has many inbuilt features to aid the process of integration and building the website
 
 
 
 
 # Working
 
-## Get API acess
+## Get API access
 
 #### Go to https://platerecognizer.com/ and get your credentials
 
-#### Put them in webcam\views.py and add creditals in line 23
+#### Put them in webcam\views.py and add credentials in line 23
 ## Run the following commands
 
 
 ```
 pip install -r requirements.txt
 
-python manage.py createsuperuser (create a super user to acess admin page)   
+python manage.py create superuser (create a super user to access the admin page)   
 
 python manage.py runserver
 ```
 ## After starting the server
 
 #### Go to localhost:8000/admin 
-#### in two wheller upload image to be tested 
+#### in two-wheeler upload image to be tested 
 
 #### Go to localhost:8000/index/camera2 to run the test and see the object detection output
 
@@ -90,9 +90,7 @@ python manage.py runserver
 
 <br/>
 
-# Achivement
 
-### The Project Recived Gold Medal 
 
 # Result
 
