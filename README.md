@@ -11,10 +11,10 @@
 
 ## Contributors 
 
-### [Harshit Gupta](https://github.com/Daredevil5053728)
 ### [Pranav Arya](https://github.com/pranav-iitr)
-### [Madhumita](https://github.com/madhu7988)
-### [Ananya Sharma](https://github.com/sharmaananya-14)
+### [Riya Jindal](https://github.com/riyaaaa123)
+### [Ishika Arya](https://github.com/I-shika)
+### [Rishika Pilania](https://github.com/rishu-3619)
 <br/>
 
 ## Technology used
