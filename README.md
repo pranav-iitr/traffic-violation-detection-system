@@ -11,10 +11,11 @@
 
 ## Contributors 
 
-### [Pranav Arya](https://github.com/pranav-iitr)
+
 ### [Riya Jindal](https://github.com/riyaaaa123)
 ### [Ishika Arya](https://github.com/I-shika)
 ### [Rishika Pilania](https://github.com/rishu-3619)
+### [Pranav Arya](https://github.com/pranav-iitr)
 <br/>
 
 ## Technology used
